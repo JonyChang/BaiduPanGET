@@ -48,6 +48,7 @@
             this.pwdLBL = new System.Windows.Forms.Label();
             this.gtpwdCK = new System.Windows.Forms.CheckBox();
             this.AboutLBL = new System.Windows.Forms.Label();
+            this.captchaLBL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.captchaBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +70,11 @@
             // 
             // GetBtn
             // 
-            this.GetBtn.Location = new System.Drawing.Point(145, 130);
+            this.GetBtn.Location = new System.Drawing.Point(44, 128);
             this.GetBtn.Name = "GetBtn";
             this.GetBtn.Size = new System.Drawing.Size(75, 23);
             this.GetBtn.TabIndex = 2;
-            this.GetBtn.Text = "Get !";
+            this.GetBtn.Text = "Get Link !";
             this.GetBtn.UseVisualStyleBackColor = true;
             this.GetBtn.Click += new System.EventHandler(this.GetBtn_Click);
             // 
@@ -96,7 +97,7 @@
             // 
             // captchaBox
             // 
-            this.captchaBox.Location = new System.Drawing.Point(457, 38);
+            this.captchaBox.Location = new System.Drawing.Point(475, 14);
             this.captchaBox.Name = "captchaBox";
             this.captchaBox.Size = new System.Drawing.Size(104, 32);
             this.captchaBox.TabIndex = 6;
@@ -105,7 +106,7 @@
             // 
             // captchaSub
             // 
-            this.captchaSub.Location = new System.Drawing.Point(457, 102);
+            this.captchaSub.Location = new System.Drawing.Point(475, 82);
             this.captchaSub.Name = "captchaSub";
             this.captchaSub.Size = new System.Drawing.Size(104, 23);
             this.captchaSub.TabIndex = 7;
@@ -116,7 +117,7 @@
             // 
             // captchaTXT
             // 
-            this.captchaTXT.Location = new System.Drawing.Point(457, 76);
+            this.captchaTXT.Location = new System.Drawing.Point(475, 53);
             this.captchaTXT.Name = "captchaTXT";
             this.captchaTXT.Size = new System.Drawing.Size(104, 20);
             this.captchaTXT.TabIndex = 8;
@@ -141,7 +142,7 @@
             // 
             // CopyBTN
             // 
-            this.CopyBTN.Location = new System.Drawing.Point(394, 99);
+            this.CopyBTN.Location = new System.Drawing.Point(394, 96);
             this.CopyBTN.Name = "CopyBTN";
             this.CopyBTN.Size = new System.Drawing.Size(57, 23);
             this.CopyBTN.TabIndex = 11;
@@ -180,7 +181,7 @@
             // workingLBL
             // 
             this.workingLBL.AutoSize = true;
-            this.workingLBL.Location = new System.Drawing.Point(13, 170);
+            this.workingLBL.Location = new System.Drawing.Point(-2, 154);
             this.workingLBL.Name = "workingLBL";
             this.workingLBL.Size = new System.Drawing.Size(74, 13);
             this.workingLBL.TabIndex = 14;
@@ -189,7 +190,7 @@
             // 
             // pwdTXT
             // 
-            this.pwdTXT.Location = new System.Drawing.Point(102, 27);
+            this.pwdTXT.Location = new System.Drawing.Point(102, 26);
             this.pwdTXT.Name = "pwdTXT";
             this.pwdTXT.ReadOnly = true;
             this.pwdTXT.Size = new System.Drawing.Size(227, 20);
@@ -198,7 +199,7 @@
             // pwdLBL
             // 
             this.pwdLBL.AutoSize = true;
-            this.pwdLBL.Location = new System.Drawing.Point(41, 30);
+            this.pwdLBL.Location = new System.Drawing.Point(37, 30);
             this.pwdLBL.Name = "pwdLBL";
             this.pwdLBL.Size = new System.Drawing.Size(59, 13);
             this.pwdLBL.TabIndex = 16;
@@ -218,18 +219,29 @@
             // AboutLBL
             // 
             this.AboutLBL.AutoSize = true;
-            this.AboutLBL.Location = new System.Drawing.Point(490, 170);
+            this.AboutLBL.Location = new System.Drawing.Point(490, 154);
             this.AboutLBL.Name = "AboutLBL";
             this.AboutLBL.Size = new System.Drawing.Size(89, 13);
             this.AboutLBL.TabIndex = 18;
             this.AboutLBL.Text = "By Jonathan Goh";
             this.AboutLBL.Click += new System.EventHandler(this.AboutLBL_Click);
             // 
+            // captchaLBL
+            // 
+            this.captchaLBL.AutoSize = true;
+            this.captchaLBL.Location = new System.Drawing.Point(413, 56);
+            this.captchaLBL.Name = "captchaLBL";
+            this.captchaLBL.Size = new System.Drawing.Size(56, 13);
+            this.captchaLBL.TabIndex = 19;
+            this.captchaLBL.Text = "Captcha : ";
+            this.captchaLBL.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 189);
+            this.ClientSize = new System.Drawing.Size(581, 169);
+            this.Controls.Add(this.captchaLBL);
             this.Controls.Add(this.AboutLBL);
             this.Controls.Add(this.gtpwdCK);
             this.Controls.Add(this.pwdLBL);
@@ -281,6 +293,7 @@
         private System.Windows.Forms.Label pwdLBL;
         private System.Windows.Forms.CheckBox gtpwdCK;
         private System.Windows.Forms.Label AboutLBL;
+        private System.Windows.Forms.Label captchaLBL;
 
     }
 }

@@ -28,6 +28,7 @@ namespace BaiduPanGET
         CookieContainer objcok = new CookieContainer();
         CookieContainer pwdobj = new CookieContainer();
         string sekey;
+        string location;
         string vcode_str;
         string vcode_img;
         string postData;
@@ -52,14 +53,23 @@ namespace BaiduPanGET
                 StreamReader pwdreader = new StreamReader(pwddataStream);
                 string pwdresponseFromServer = pwdreader.ReadToEnd();
                 pwdreader.Close();
-                string location = pwdresp.ResponseUri.ToString();
+                Regex urlregex = new Regex("http:\\/\\/pan.baidu.com\\/share\\/init\\?shareid=(.\\d+)&uk=(.\\d+).*");
+                Match urlmatch = urlregex.Match(link);
+                if (urlmatch.Success)
+                {
+                    this.location = link;
+                }
+                else
+                {
+                    this.location = pwdresp.ResponseUri.ToString();
+                }
                 Regex pwdregex = new Regex("shareid=(?<shareid>\\d+)");
-                Match pwdmatch = pwdregex.Match(location);
+                Match pwdmatch = pwdregex.Match(this.location);
                 if (pwdmatch.Success)
                 {
                     string pwdshareid = pwdmatch.Groups["shareid"].Value;
                     Regex pwdregex2 = new Regex("uk=(?<uk>\\d+)");
-                    Match pwdmatch2 = pwdregex2.Match(location);
+                    Match pwdmatch2 = pwdregex2.Match(this.location);
                     if (pwdmatch2.Success)
                     {
                         string pwduk = pwdmatch2.Groups["uk"].Value;
@@ -396,6 +406,7 @@ namespace BaiduPanGET
                 if(captchablah == true){
                     MessageBox.Show("Captcha Required.");
                     captchaBox.Image = img;
+                    captchaLBL.Visible = true;
                     captchaBox.Visible = true;
                     captchaTXT.Visible = true;
                     captchaSub.Visible = true;
@@ -426,6 +437,7 @@ namespace BaiduPanGET
                 captchaBox.Visible = false;
                 captchaTXT.Visible = false;
                 captchaSub.Visible = false;
+                captchaLBL.Visible = false;
             }
         }
 
