@@ -1,0 +1,8 @@
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\bin\Debug\BaiduPanGET.exe
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\bin\Debug\BaiduPanGET.pdb
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\obj\Debug\BaiduPanGET.csprojResolveAssemblyReference.cache
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\obj\Debug\BaiduPanGET.MainForm.resources
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\obj\Debug\BaiduPanGET.Properties.Resources.resources
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\obj\Debug\BaiduPanGET.csproj.GenerateResource.Cache
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\obj\Debug\BaiduPanGET.exe
+c:\users\jonathan\documents\visual studio 2013\Projects\BaiduPanGET\BaiduPanGET\obj\Debug\BaiduPanGET.pdb
